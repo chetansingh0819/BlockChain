@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MetaCoin - Truffle Webpack Demo w/ Frontend</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> 
+  <script src="./app/bower_components/angular/angular.js"></script> 
+  <script src="./app/bower_components/angular-route/angular-route.js"></script> 
+  <script src="./app/bower_components/angular-route/angular-route.min.js"></script>
+  <script src="./app/bower_components/angular-resource/angular-resource.min.js"></script> 
+  <script src="./app/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script> 
+  <script  src="./app.js"></script>
+  <!--<script type="text/javascript">  
+     function disableF5(e) { if ((e.which || e.keyCode) == 116 || (e.which || e.keyCode) == 82) e.preventDefault(); };
+        $(document).ready(function(){
+        $(document).on("keydown", disableF5);
+        });
+  </script>  -->
+  <!--<script src="./blockChain.js"></script>-->
+</head>
+<body ng-app="myModule" ng-controller="MyController">
+<div class="container">
+  <h2>List of Policies</h2>
+              
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Creation Date</th>
+        <th>Insurer Name</th>
+        <th>Period Cover</th>
+        <th>Zip Code</th>
+        <th>Granted/Ungranted</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="list in policyList.data">
+         <td>{{list.creationDate | date}}</td>
+        <td>{{list.insurerName}}</td>
+        <td>{{list.periodCover}}</td>
+        <td>{{list.zipCode}}</td>{{claimedStatus[list.zipCode]}}
+        <td><Button disabled="disabled" ng-class="{'unClaim-button':!claimedStatus[list.zipCode],'claimed-button':claimedStatus[list.zipCode]}"  ng-click="claim(list,'chetan Singh')" name="claimButton">{{claimedStatus[list.zipCode] ? "Granted" : "Ungranted"}}</Button></td>
+      </tr>
+      <!--<tr>
+        <td>34hf43</td>
+        <td>Medical Policy</td>
+        <td>Tata AIG</td>
+        <td><Button id="2" class="claim-button" onclick="App.claim('2','34hf43','Medical Policy','Tata AIG','Chetan Singh')" name="claimButton">Claim</Button></td>
+      </tr>
+      <tr>
+        <td>23df98</td>
+        <td>Health Insurance</td>
+        <td>SBI</td>
+        <td><Button id="3" class="claimed-button" onclick="App.claim('3','23df98','Health Insurance','SBI','Chetan Singh')" disabled="disabled" name="claimButton">Claimed</Button></td>
+      </tr>
+      <tr>
+        <td>997d21</td>
+        <td>Life Term Insurance</td>
+        <td>BSNL</td>
+        <td><Button id="4" class="claim-button" onclick="App.claim('4','997d21','Life Term Insurance','BSNL','Chetan Singh')" name="claimButton">Claim</Button></td>
+      </tr>
+      <tr>
+        <td>78hn34</td>
+        <td>Life Insurance</td>
+        <td>Oracle</td>
+        <td><Button class="claimed-button" onclick="App.claim('5','78hn34','Life Insurance','Oracle','Chetan Singh')" disabled="disabled" name="claimButton">Claimed</Button></td>
+      </tr>-->
+    </tbody>
+  </table>
+</div>
+
+
+</body>
+</html>
