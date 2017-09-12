@@ -1,11 +1,11 @@
-#Install the truffle with npm with following command
+# Install the truffle with npm with following command
      npm install truffle -g
 
-#Installation of Required NPM Packages Packages
+# Installation of Required NPM Packages Packages
      npm install
  This will download the required npm packages.
 
-#Now you required some tools to start a blockchain network
+# Now you required some tools to start a blockchain network
      1. Geth Client Node
      2. Mist Browser
 
