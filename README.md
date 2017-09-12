@@ -30,11 +30,11 @@ and to start a miner type the follwing command
 
 ## Common Errors 
      1. Do not have Enough fund in account to deploy Contract- 
-        You can use the following Link:  "http://faucet.ropsten.be:3001/" or
-         start miner again.
+        You can use the following Link:  "http://faucet.ropsten.be:3001/" or start miner again.
 
      2. Account is Locked - Run the following command to unlock account
       
-                           personal.unlockAccount("Hash key of Account" ," password", duration)
+             personal.unlockAccount("Hash key of Account" ," password", duration)
 
 ## This Kit uses external database also to store the info of claimer. You can find the database here:
+
